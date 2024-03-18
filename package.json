@@ -16,7 +16,8 @@
     "deploy": "firebase deploy --only functions",
     "logs": "firebase functions:log",
     "deploy:development": "yarn build && yarn firebase --non-interactive deploy --only functions",
-    "deploy:production": "yarn build && yarn firebase -P production --non-interactive deploy --only functions"
+    "deploy:production": "yarn build && yarn firebase -P production --non-interactive deploy --only functions",
+    "typecheck": "yarn tsc"
   },
   "engines": {
     "node": "20"
