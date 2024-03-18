@@ -7,7 +7,8 @@ import orderCreatedConsumer from './entrypoints/order_created_consumer'
 export const notifyOrderCreatedFunction = onMessagePublished(
   {
     topic: DomainEventName.ORDER_CREATED,
-    secrets: [mailerUsernameKey, mailerPasswordKey]
+    secrets: [mailerUsernameKey, mailerPasswordKey],
+    region: 'southamerica-east1'
   },
   async event => {
     logger.info(`Receiving incoming ${DomainEventName.ORDER_CREATED} Domain Event`, event)
