@@ -6,6 +6,7 @@ lib/**/*
 
 # Environment variables
 .secret.*
+!.secret.*.sample
 
 # TypeScript v1 declaration files
 typings/
