@@ -1,0 +1,6 @@
+{
+  "projects": {
+    "default": "notification-service-dev-4e89c",
+    "production": "notification-service-c518b"
+  }
+}
