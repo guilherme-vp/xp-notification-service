@@ -1,6 +1,6 @@
 import logger from '@infra/logger'
 import settings from '@infra/settings'
-import mailTransport from './transport'
+import nodemailer from 'nodemailer'
 
 export interface MailerSendEmailBody {
   recipientEmailAddress: string
@@ -9,9 +9,19 @@ export interface MailerSendEmailBody {
 }
 
 export async function sendMail(postBody: MailerSendEmailBody): Promise<boolean> {
+  const transport = nodemailer.createTransport({
+    host: settings.mailer.host,
+    port: Number(settings.mailer.port),
+    secure: false,
+    auth: {
+      user: settings.mailer.username.value(),
+      pass: settings.mailer.password.value()
+    }
+  })
+
   try {
     logger.info(`Enviando e-mail transacional para ${postBody.recipientEmailAddress}`, { postBody })
-    await mailTransport.sendMail({
+    await transport.sendMail({
       from: `<${settings.mailer.sender}>`,
       to: postBody.recipientEmailAddress,
       subject: postBody.subject,

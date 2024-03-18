@@ -5,7 +5,6 @@ lib/**/*
 *.log
 
 # Environment variables
-.env
 .secret.*
 
 # TypeScript v1 declaration files
