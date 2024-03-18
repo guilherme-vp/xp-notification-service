@@ -1,0 +1,50 @@
+{
+  "extends": "@goodeggs/tsconfig/base",
+  "exclude": [
+    "dist",
+    "coverage",
+    "node_modules",
+    ".yarn"
+  ],
+  "compilerOptions": {
+    "module": "commonjs",
+    "noUnusedLocals": true,
+    "strict": true,
+    "sourceMap": true,
+    "declaration": true,
+    "lib": [
+      "ES2022"
+    ],
+    "noEmit": true,
+    "esModuleInterop": true,
+    "strictNullChecks": true,
+    "strictFunctionTypes": false,
+    "noImplicitReturns": true,
+    "inlineSources": true,
+    "downlevelIteration": true,
+    "isolatedModules": true,
+    "typeRoots": [
+      "node_modules/@types"
+    ],
+    "baseUrl": ".",
+    "rootDir": ".",
+    "paths": {
+      "@utils/*": [
+        "src/utils/*"
+      ],
+      "@infra/*": [
+        "src/infra/*"
+      ],
+      "@domain_models/*": [
+        "src/domain_models/*"
+      ],
+      "@domains/*": [
+        "src/domains/*"
+      ]
+    },
+  },
+  "include": [
+    "src/**/*"
+  ],
+  "compileOnSave": true
+}
