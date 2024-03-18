@@ -15,7 +15,7 @@
     "start:emulator": "yarn build && concurrently -K 'yarn watch' 'yarn serve'",
     "deploy": "firebase deploy --only functions",
     "logs": "firebase functions:log",
-    "deploy:development": "yarn build && yarn firebase --non-interactive deploy --only functions",
+    "deploy:development": "yarn build && yarn firebase -P development --non-interactive deploy --only functions",
     "deploy:production": "yarn build && yarn firebase -P production --non-interactive deploy --only functions",
     "typecheck": "yarn tsc"
   },
