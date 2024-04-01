@@ -31,6 +31,7 @@
   },
   "devDependencies": {
     "@biomejs/biome": "^1.6.1",
+    "@faker-js/faker": "^8.4.1",
     "@goodeggs/toolkit": "^8.0.0",
     "@goodeggs/tsconfig": "^2.0.2",
     "@swc/cli": "^0.3.10",

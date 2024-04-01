@@ -712,6 +712,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@faker-js/faker@npm:^8.4.1":
+  version: 8.4.1
+  resolution: "@faker-js/faker@npm:8.4.1"
+  checksum: 10c0/4f2aecddcfdc2cc8b50b2d15d1e37302a7c7a5bbd184ae910a9d271bc11248533ca74dcdd4a9ccbe20410553e7af0f6a4d334c5b955635e09a32ddf4a64942d4
+  languageName: node
+  linkType: hard
+
 "@fastify/busboy@npm:^1.2.1":
   version: 1.2.1
   resolution: "@fastify/busboy@npm:1.2.1"
@@ -9126,6 +9133,7 @@ __metadata:
   resolution: "notification-service@workspace:."
   dependencies:
     "@biomejs/biome": "npm:^1.6.1"
+    "@faker-js/faker": "npm:^8.4.1"
     "@goodeggs/toolkit": "npm:^8.0.0"
     "@goodeggs/tsconfig": "npm:^2.0.2"
     "@swc/cli": "npm:^0.3.10"
