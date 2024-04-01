@@ -1,7 +1,7 @@
 import logger from '@infra/logger'
 import * as mailerService from '@infra/mailer'
 
-interface OrderCreatedArgs {
+export interface OrderCreatedArgs {
   user: {
     name: string
     email: string
@@ -12,10 +12,6 @@ interface OrderCreatedArgs {
   }>
 }
 
-/**
- * @doc Call this when a referral has been shared by a giver to a recipient.
- * Callers DO NOT know what occurs as a result of this call; it is an opaque hook.
- */
 const onOrderCreated = async (event: OrderCreatedArgs): Promise<void> => {
   const { user } = event
   const namedEmail = `${user.name} <${user.email}>`
