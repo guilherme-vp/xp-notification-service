@@ -55,6 +55,6 @@ jobs:
       - name: Install dependencies
         run: yarn install
       - name: Deploy Development environment
-        run: yarn deploy:development --token "${{ secrets.FIREBASE_TOKEN }}"
+        run: yarn deploy:development --token "${{ secrets.FIREBASE_TOKEN }}" --force
       - name: Deploy Production environment
-        run: yarn deploy:production --token "${{ secrets.FIREBASE_TOKEN }}"
+        run: yarn deploy:production --token "${{ secrets.FIREBASE_TOKEN }}" --force
